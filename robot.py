@@ -6,7 +6,6 @@
 # Created Date: 2022-04-26
 # version ='1.0'
 # --------------------------------------------
-
 class Robot():
     def __init__(self, x, y, facing):
         self.x = x
@@ -23,7 +22,7 @@ class Robot():
             elif command == 'M':
                 self.move_forward()
             else:
-                print('Invalid command')
+                return 'Invalid command'
 
     def facing_left(self):
         index = self.positions.index(self.facing)

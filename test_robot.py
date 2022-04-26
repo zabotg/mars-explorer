@@ -54,5 +54,12 @@ class TestRobot(unittest.TestCase):
         robot.move('M')
         self.assertEqual(robot.y, 0)
 
+    def test_move_with_wrong_direction(self):
+        robot = Robot(3, 3, 'N')
+        self.assertEqual(robot.move('X'), 'Invalid command')
+        self.assertEqual(robot.y, 3)
+        self.assertEqual(robot.x, 3)
+        self.assertEqual(robot.facing, 'N')
+
 if __name__ == '__main__':
     unittest.main()

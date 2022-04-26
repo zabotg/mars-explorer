@@ -6,7 +6,6 @@
 # Created Date: 2022-04-26
 # version ='1.0'
 # --------------------------------------------
-
 from robot import Robot
 
 def read_file(file):
@@ -16,11 +15,11 @@ def read_file(file):
 def main():
     lines = read_file('input.txt')
 
-    board_size = lines[0].split() 
+    _board_size = lines[0].split() 
     for i in range(1, len(lines), 2):
         x, y, face = lines[i].split()
-        x = int(x);
-        y = int(y);
+        x = int(x)
+        y = int(y)
 
         commands = list(lines[i + 1])
 
